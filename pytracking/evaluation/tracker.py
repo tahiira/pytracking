@@ -214,6 +214,7 @@ class Tracker:
             info['previous_output'] = prev_output
 
             out = tracker.track(image, info)
+            #read /pytracking/evaluation/multi_object_wrapper.py #use previous_output 
             prev_output = OrderedDict(out)
             _store_outputs(out, {'time': time.time() - start_time})
 
